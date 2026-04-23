@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Aryan Bhapkar — Robotics & AI Engineer</title>
+<meta name="description" content="Portfolio of Aryan Bhapkar — Robotics, AI and Machine Learning Engineer. Autonomous systems research, LLM-driven robot control, sim-to-real pipelines." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230a0a0a'/%3E%3Ctext x='50%25' y='58%25' font-family='Inter,Arial' font-size='18' font-weight='800' fill='%2300e5ff' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;700&family=Syne:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+<!-- PRELOADER -->
+<div id="preloader" aria-hidden="true">
+  <div class="pre-grid"></div>
+  <div class="pre-content">
+    <div class="pre-mono"><span class="pre-dot"></span> INITIALIZING_NEURAL_ENGINE</div>
+    <div class="pre-title">
+      <span class="pre-word" data-word="ARYAN">ARYAN</span>
+      <span class="pre-word" data-word="BHAPKAR">BHAPKAR</span>
+    </div>
+    <div class="pre-bar"><div class="pre-bar-fill"></div></div>
+    <div class="pre-counter"><span id="preCount">0</span><span class="pre-pct">%</span></div>
+  </div>
+</div>
+
+<!-- 3D / CANVAS BACKGROUND -->
+<canvas id="bg-canvas"></canvas>
+<div class="grid-overlay"></div>
+<div class="noise-overlay"></div>
+
+<!-- CURSOR -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-dot" id="cursorDot"></div>
+
+<!-- TOP NAV -->
+<header class="nav" id="nav">
+  <a href="#hero" class="nav-brand">
+    <span class="brand-mark">AB</span>
+    <span class="brand-sub">Robotics · AI</span>
+  </a>
+  <nav class="nav-links" aria-label="Primary">
+    <a href="#about" data-nav>About</a>
+    <a href="#experience" data-nav>Experience</a>
+    <a href="#projects" data-nav>Projects</a>
+    <a href="#education" data-nav>Education</a>
+    <a href="#off-track" data-nav>Research</a>
+    <a href="#skills" data-nav>Skills</a>
+    <a href="#contact" data-nav>Contact</a>
+  </nav>
+  <a class="nav-resume" href="assets/Aryan_Bhapkar_Resume.pdf" target="_blank" rel="noopener" download>
+    <span>RESUME</span>
+    <span class="nr-icon">↓</span>
+  </a>
+  <button class="nav-burger" id="navBurger" aria-label="Menu">
+    <span></span><span></span>
+  </button>
+</header>
+
+<!-- MOBILE DRAWER -->
+<div class="drawer" id="drawer" aria-hidden="true">
+  <a href="#about" data-nav>About</a>
+  <a href="#experience" data-nav>Experience</a>
+  <a href="#projects" data-nav>Projects</a>
+  <a href="#education" data-nav>Education</a>
+  <a href="#off-track" data-nav>Research</a>
+  <a href="#skills" data-nav>Skills</a>
+  <a href="#contact" data-nav>Contact</a>
+  <a href="assets/Aryan_Bhapkar_Resume.pdf" target="_blank" rel="noopener" download>Download Resume ↓</a>
+</div>
+
+<main>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-meta-top">
+    <div class="meta-line"><span class="dash"></span> PORTFOLIO / 2026 EDITION</div>
+    <div class="meta-line end">TEMPE, ARIZONA · UTC-07:00</div>
+  </div>
+
+  <div class="hero-stage">
+    <div class="hero-photo-wrap" data-parallax="0.15">
+      <div class="photo-frame">
+        <img src="assets/aryan.jpg" alt="Aryan Bhapkar" class="hero-photo" />
+        <div class="photo-scan"></div>
+        <div class="photo-corners">
+          <span></span><span></span><span></span><span></span>
+        </div>
+      </div>
+      <div class="photo-tag photo-tag-1"><span>SUBJECT</span><strong>A. BHAPKAR</strong></div>
+      <div class="photo-tag photo-tag-2"><span>DOMAIN</span><strong>ROBOTICS · AI</strong></div>
+    </div>
+
+    <h1 class="hero-title">
+      <span class="row"><span class="char-wrap"><span class="char">A</span><span class="char">R</span><span class="char">Y</span><span class="char">A</span><span class="char">N</span></span></span>
+      <span class="row outline"><span class="char-wrap"><span class="char">B</span><span class="char">H</span><span class="char">A</span><span class="char">P</span><span class="char">K</span><span class="char">A</span><span class="char">R</span></span></span>
+    </h1>
+
+    <div class="hero-sub">
+      <div class="sub-line" data-split>Robotics & AI Engineer building autonomous systems,</div>
+      <div class="sub-line" data-split>LLM-driven control loops, and sim-to-real pipelines.</div>
+    </div>
+  </div>
+
+  <div class="hero-bottom">
+    <div class="hero-pill">
+      <span class="pill-dot"></span> M.S. ROBOTICS · ARIZONA STATE UNIVERSITY
+    </div>
+    <div class="hero-marquee">
+      <div class="marquee-track">
+        <span>PYTHON</span><span>·</span><span>ROS2</span><span>·</span><span>MUJOCO</span><span>·</span><span>PYTORCH</span><span>·</span><span>YOLOv9</span><span>·</span><span>TD3</span><span>·</span><span>LLMs</span><span>·</span><span>GEMINI</span><span>·</span><span>OPENCV</span><span>·</span><span>AWS</span><span>·</span><span>KALMAN FILTER</span><span>·</span>
+        <span>PYTHON</span><span>·</span><span>ROS2</span><span>·</span><span>MUJOCO</span><span>·</span><span>PYTORCH</span><span>·</span><span>YOLOv9</span><span>·</span><span>TD3</span><span>·</span><span>LLMs</span><span>·</span><span>GEMINI</span><span>·</span><span>OPENCV</span><span>·</span><span>AWS</span><span>·</span><span>KALMAN FILTER</span><span>·</span>
+      </div>
+    </div>
+    <a href="#about" class="scroll-cue" aria-label="Scroll">
+      <span class="cue-label">SCROLL</span>
+      <span class="cue-line"></span>
+    </a>
+  </div>
+</section>
+
+<!-- ABOUT / MESSAGE FROM ARYAN -->
+<section class="about" id="about">
+  <div class="section-head">
+    <span class="kicker"><span class="kdot"></span> MESSAGE FROM ARYAN</span>
+    <h2 class="section-title" data-reveal>
+      <span>Redefining what</span>
+      <span>machines can <em>perceive,</em></span>
+      <span>decide, and <em>do.</em></span>
+    </h2>
+  </div>
+
+  <div class="about-body">
+    <p class="about-lead" data-split-lines>
+      I'm a Robotics & AI engineer specialising in autonomous manipulation, LLM-driven
+      robot control and sim-to-real systems. At ASU's Interactive Robotics Laboratory, I
+      build closed-loop pipelines where language reasoning, motion planning and physical
+      execution meet — and I obsess over the milliseconds in between.
+    </p>
+    <p class="about-lead" data-split-lines>
+      My work spans the full stack — from training RL policies and perception models to
+      shipping them onto real hardware. Four IEEE publications, one UR5e learning new
+      tricks, and a 5-DOF arm that learned to play table tennis along the way.
+    </p>
+
+    <div class="stat-row">
+      <div class="stat" data-reveal>
+        <div class="stat-num" data-count="4">0</div>
+        <div class="stat-label">IEEE Publications</div>
+      </div>
+      <div class="stat" data-reveal>
+        <div class="stat-num" data-count="95">0</div>
+        <div class="stat-label">% real-world accuracy</div>
+      </div>
+      <div class="stat" data-reveal>
+        <div class="stat-num" data-count="30">0</div>
+        <div class="stat-label">ms perception latency</div>
+      </div>
+      <div class="stat" data-reveal>
+        <div class="stat-num" data-count="5">0</div>
+        <div class="stat-label">DOF sim-to-real arm</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section class="experience" id="experience">
+  <div class="section-head split">
+    <div>
+      <span class="kicker"><span class="kdot"></span> EXPERIENCE</span>
+      <h2 class="section-title" data-reveal>
+        <span>From research</span>
+        <span>to <em>reality.</em></span>
+      </h2>
+    </div>
+    <p class="section-note" data-split-lines>
+      Current research aideship at ASU's Interactive Robotics Laboratory —
+      closing the loop between language, planning and physical execution.
+    </p>
+  </div>
+
+  <div class="exp-list">
+    <article class="exp-row" data-reveal>
+      <div class="exp-left">
+        <span class="exp-date">AUG 2025 — PRESENT</span>
+        <span class="exp-loc">TEMPE, ARIZONA · USA</span>
+      </div>
+      <div class="exp-main">
+        <div class="exp-role">Research Aide</div>
+        <h3 class="exp-org">Interactive Robotics Laboratory · Arizona State University</h3>
+        <div class="exp-adv">Advisors · Prof. Heni Ben Amor · Mohamed Mistiri</div>
+        <ul class="exp-bullets">
+          <li>
+            Developed a MuJoCo-based UR5e simulation for adaptive tabletop manipulation
+            using reinforcement learning and trajectory planning.
+          </li>
+          <li>
+            Built an LLM-driven robotic control system with Google Gemini Flash 2.5 to
+            convert natural-language commands into real-time robot actions.
+          </li>
+          <li>
+            Iterated on a closed control loop linking language reasoning, motion planning
+            and physical execution on real hardware.
+          </li>
+        </ul>
+        <ul class="chip-row">
+          <li>MuJoCo</li><li>UR5e</li><li>Gemini 2.5</li><li>Reinforcement Learning</li>
+          <li>Trajectory Planning</li><li>Python</li>
+        </ul>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section class="projects" id="projects">
+  <div class="section-head split">
+    <div>
+      <span class="kicker"><span class="kdot"></span> PROJECTS</span>
+      <h2 class="section-title" data-reveal>
+        <span>Things I've</span>
+        <span><em>built.</em></span>
+      </h2>
+    </div>
+    <p class="section-note" data-split-lines>
+      Systems that moved beyond a notebook — sim-to-real pipelines, perception stacks
+      and generative models.
+    </p>
+  </div>
+
+  <div class="proj-marquee">
+  <div class="proj-track">
+    <article class="proj-card">
+      <div class="proj-head">
+        <span class="proj-tag">AUTONOMOUS DRIVING · MULTI-AGENT RL</span>
+        <span class="proj-date">FALL 2025</span>
+      </div>
+      <h3 class="proj-title">Autonomous Driving Simulation · Waymo-Style</h3>
+      <p class="proj-desc">
+        Trained a 20-vehicle urban driving fleet in CARLA/ROS2 with PPO
+        (Stable-Baselines3) over 100K episodes / 1M timesteps in 15 hours —
+        hitting an 80% stable multi-agent navigation success rate. Built an
+        automated validation pipeline that runs performance checks every
+        100K episodes to prevent regression during continuous RL training,
+        and shipped a high-fidelity demo for ADAS stakeholder evaluation.
+      </p>
+      <div class="proj-stats">
+        <div><strong>80%</strong><span>success rate</span></div>
+        <div><strong>20</strong><span>agents</span></div>
+        <div><strong>1M</strong><span>timesteps</span></div>
+      </div>
+      <ul class="chip-row">
+        <li>CARLA</li><li>ROS2</li><li>PPO</li><li>Stable-Baselines3</li><li>Multi-Agent RL</li><li>Docker</li><li>Unreal Engine 4</li><li>CI/CD</li>
+      </ul>
+    </article>
+
+    <article class="proj-card">
+      <div class="proj-head">
+        <span class="proj-tag">ROBOTICS · SIM-TO-REAL</span>
+        <span class="proj-date">SPRING 2025</span>
+      </div>
+      <h3 class="proj-title">5-DOF Robotic Arm · Table Tennis Prototype</h3>
+      <p class="proj-desc">
+        Built a sim-to-real 5-DOF robotic arm in Gazebo/ROS2 using YOLOv9, TD3, OpenCV,
+        Kalman filtering and optical flow — achieving 95% real-world accuracy at 30 ms
+        latency and a 70% hit-rate on low-cost servos through domain randomization.
+      </p>
+      <div class="proj-stats">
+        <div><strong>95%</strong><span>accuracy</span></div>
+        <div><strong>30ms</strong><span>latency</span></div>
+        <div><strong>70%</strong><span>hit rate</span></div>
+      </div>
+      <ul class="chip-row">
+        <li>ROS2</li><li>Gazebo</li><li>YOLOv9</li><li>TD3</li><li>Kalman Filter</li><li>OpenCV</li>
+      </ul>
+    </article>
+
+    <article class="proj-card">
+      <div class="proj-head">
+        <span class="proj-tag">GEN-AI · STYLE TRANSFER</span>
+        <span class="proj-date">FALL 2023</span>
+      </div>
+      <h3 class="proj-title">StyleGAN-Based Style Mapper</h3>
+      <p class="proj-desc">
+        Designed a style-transfer system using GAN inversion and JoJoGAN on top of
+        StyleGAN — generating high-resolution imagery with precise single-reference
+        style control and minimal training time.
+      </p>
+      <div class="proj-stats">
+        <div><strong>1-shot</strong><span>reference</span></div>
+        <div><strong>HR</strong><span>output</span></div>
+        <div><strong>Min.</strong><span>train time</span></div>
+      </div>
+      <ul class="chip-row">
+        <li>StyleGAN</li><li>JoJoGAN</li><li>GAN Inversion</li><li>PyTorch</li>
+      </ul>
+    </article>
+  </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<!-- note: .proj-track is auto-duplicated by js/app.js for seamless marquee -->
+<section class="education" id="education">
+  <div class="section-head split">
+    <div>
+      <span class="kicker"><span class="kdot"></span> EDUCATION</span>
+      <h2 class="section-title" data-reveal>
+        <span>Built on</span>
+        <span><em>first</em> principles.</span>
+      </h2>
+    </div>
+    <p class="section-note" data-split-lines>
+      Graduate research in AI-driven robotics at Arizona State University — undergrad
+      foundations in Artificial Intelligence from NMIMS Mumbai.
+    </p>
+  </div>
+
+  <div class="edu-list">
+    <article class="edu-row" data-reveal>
+      <div class="edu-col edu-date">
+        <span class="edu-year">2024 — 2025</span>
+        <span class="edu-place">TEMPE, ARIZONA · USA</span>
+      </div>
+      <div class="edu-col edu-main">
+        <h3 class="edu-degree">M.S. Robotics & Autonomous Systems <em>(Artificial Intelligence)</em></h3>
+        <div class="edu-school">Arizona State University</div>
+        <p class="edu-note">
+          Graduate research at the Interactive Robotics Laboratory under
+          Prof. Heni Ben Amor — MuJoCo-based UR5e simulation and LLM-driven
+          robot control using Google Gemini Flash 2.5.
+        </p>
+      </div>
+      <div class="edu-col edu-tags">
+        <span>Robotics</span>
+        <span>Reinforcement Learning</span>
+        <span>LLM Control</span>
+      </div>
+    </article>
+
+    <article class="edu-row" data-reveal>
+      <div class="edu-col edu-date">
+        <span class="edu-year">2020 — 2024</span>
+        <span class="edu-place">MUMBAI · INDIA</span>
+      </div>
+      <div class="edu-col edu-main">
+        <h3 class="edu-degree">B.Tech Artificial Intelligence</h3>
+        <div class="edu-school">NMIMS · Mukesh Patel School of Technology Management & Engineering</div>
+        <p class="edu-note">
+          Four-year Artificial Intelligence program. Four IEEE-indexed publications
+          on computer vision, biometric authentication and industrial robotics completed
+          during and shortly after this degree.
+        </p>
+      </div>
+      <div class="edu-col edu-tags">
+        <span>AI · ML</span>
+        <span>Computer Vision</span>
+        <span>4× IEEE Publications</span>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- OFF TRACK — RESEARCH / PUBLICATIONS -->
+<section class="off-track" id="off-track">
+  <div class="section-head split">
+    <div>
+      <span class="kicker"><span class="kdot"></span> OFF TRACK · RESEARCH</span>
+      <h2 class="section-title" data-reveal>
+        <span>Four papers.</span>
+        <span>One <em>thesis</em>:</span>
+        <span>machines that see <em>better.</em></span>
+      </h2>
+    </div>
+    <p class="section-note" data-split-lines>
+      Published work in computer vision, biometric authentication and
+      industrial robotics — each IEEE indexed with DOI.
+    </p>
+  </div>
+
+  <div class="paper-list">
+    <article class="paper" data-paper>
+      <div class="paper-left">
+        <span class="paper-num">01</span>
+        <span class="paper-venue">IEEE ICCVMI · SPRING 2023</span>
+      </div>
+      <div class="paper-body">
+        <h3 class="paper-title">Open-Set Masked Face Identification System</h3>
+        <p class="paper-desc">
+          Open-set identification using computer vision and ML techniques that holds up
+          under face-covering conditions — motivated by post-COVID identity verification.
+        </p>
+        <a class="paper-doi" target="_blank" rel="noopener"
+           href="https://doi.org/10.1109/CVMI59935.2023.10464743">
+           DOI · 10.1109/CVMI59935.2023.10464743
+        </a>
+      </div>
+      <div class="paper-right">
+        <span class="paper-tag">Computer Vision</span>
+        <span class="paper-tag">Biometrics</span>
+      </div>
+    </article>
+
+    <article class="paper" data-paper>
+      <div class="paper-left">
+        <span class="paper-num">02</span>
+        <span class="paper-venue">IEEE MoSICOM · FALL 2023</span>
+      </div>
+      <div class="paper-body">
+        <h3 class="paper-title">EarSiamNet · Siamese Networks & SVM for Ear Biometrics</h3>
+        <p class="paper-desc">
+          Siamese-network-based ear biometric authentication with SVM classification —
+          97.86% accuracy using HOG feature extraction; edge-ready for secure access
+          control and healthcare.
+        </p>
+        <a class="paper-doi" target="_blank" rel="noopener"
+           href="https://doi.org/10.1109/MoSICom59118.2023.10458801">
+           DOI · 10.1109/MoSICom59118.2023.10458801
+        </a>
+      </div>
+      <div class="paper-right">
+        <span class="paper-tag">Siamese Net</span>
+        <span class="paper-tag">97.86% Acc.</span>
+      </div>
+    </article>
+
+    <article class="paper" data-paper>
+      <div class="paper-left">
+        <span class="paper-num">03</span>
+        <span class="paper-venue">IEEE I2CT2 · SPRING 2024</span>
+      </div>
+      <div class="paper-body">
+        <h3 class="paper-title">Color Sorting Pick-and-Place Robotic Arm</h3>
+        <p class="paper-desc">
+          Sensor-driven pick-and-place arm for industrial color sorting — targeted at
+          manufacturing, warehousing and recycling pipelines.
+        </p>
+        <a class="paper-doi" target="_blank" rel="noopener"
+           href="https://doi.org/10.1109/I2CT61223.2024.10544011">
+           DOI · 10.1109/I2CT61223.2024.10544011
+        </a>
+      </div>
+      <div class="paper-right">
+        <span class="paper-tag">Industrial</span>
+        <span class="paper-tag">Sensors</span>
+      </div>
+    </article>
+
+    <article class="paper" data-paper>
+      <div class="paper-left">
+        <span class="paper-num">04</span>
+        <span class="paper-venue">IEEE ICETA · FALL 2024</span>
+      </div>
+      <div class="paper-body">
+        <h3 class="paper-title">Mitigating Shadows in Vision-Based Industrial Robotics</h3>
+        <p class="paper-desc">
+          Hybrid vision pipeline with lighting optimisation, image pre-processing and
+          PatMax for shadow-resilient detection — 75–96% accuracy on the KUKA KR4 AGILUS.
+        </p>
+        <a class="paper-doi" target="_blank" rel="noopener"
+           href="https://doi.org/10.1109/MPSecICETA64837.2025.11118444">
+           DOI · 10.1109/MPSecICETA64837.2025.11118444
+        </a>
+      </div>
+      <div class="paper-right">
+        <span class="paper-tag">KUKA KR4</span>
+        <span class="paper-tag">PatMax</span>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section class="skills" id="skills">
+  <div class="section-head split">
+    <div>
+      <span class="kicker"><span class="kdot"></span> SKILLS</span>
+      <h2 class="section-title" data-reveal>
+        <span>The tools of</span>
+        <span>the <em>trade.</em></span>
+      </h2>
+    </div>
+    <p class="section-note" data-split-lines>
+      Core skills for training, simulation, perception and deployment — battle-tested
+      across research and industrial projects.
+    </p>
+  </div>
+
+  <div class="stack-grid">
+    <div class="stack-col" data-reveal>
+      <h4 class="stack-head">ML & AI</h4>
+      <ul>
+        <li>Deep Learning</li><li>Reinforcement Learning · TD3</li><li>CNNs · GANs</li>
+        <li>LLMs · Fine-Tuning</li><li>MLOps</li><li>NLP</li><li>Inference Optimization</li>
+      </ul>
+    </div>
+    <div class="stack-col" data-reveal>
+      <h4 class="stack-head">Robotics & Control</h4>
+      <ul>
+        <li>ROS2 · ROS2 Gazebo</li><li>MuJoCo · URDF</li><li>Robot Kinematics · IK</li>
+        <li>Trajectory Planning</li><li>Kalman Filtering</li><li>Dynamic Movement Primitives</li>
+      </ul>
+    </div>
+    <div class="stack-col" data-reveal>
+      <h4 class="stack-head">Computer Vision</h4>
+      <ul>
+        <li>OpenCV</li><li>YOLOv9</li><li>Optical Flow</li><li>Feature Extraction</li>
+        <li>Object Detection</li><li>Visual Tracking</li>
+      </ul>
+    </div>
+    <div class="stack-col" data-reveal>
+      <h4 class="stack-head">Languages</h4>
+      <ul>
+        <li>Python</li><li>SQL</li><li>Arduino C</li><li>R</li><li>Bash</li><li>MATLAB</li>
+      </ul>
+    </div>
+    <div class="stack-col" data-reveal>
+      <h4 class="stack-head">Frameworks</h4>
+      <ul>
+        <li>PyTorch · TensorFlow</li><li>NumPy · Pandas · SciPy</li><li>Scikit-Learn</li>
+        <li>Matplotlib</li><li>Linux</li>
+      </ul>
+    </div>
+    <div class="stack-col" data-reveal>
+      <h4 class="stack-head">Cloud & Infra</h4>
+      <ul>
+        <li>AWS EC2 · Lambda</li><li>AWS S3 · DynamoDB</li><li>Docker</li><li>Git · GitHub</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE / CTA -->
+<section class="marquee-section" aria-hidden="true">
+  <div class="big-marquee">
+    <div class="big-track">
+      <span>ROBOTICS</span><span class="star">✸</span>
+      <span>AUTONOMY</span><span class="star">✸</span>
+      <span>MACHINE LEARNING</span><span class="star">✸</span>
+      <span>LLM CONTROL</span><span class="star">✸</span>
+      <span>SIM · TO · REAL</span><span class="star">✸</span>
+      <span>ROBOTICS</span><span class="star">✸</span>
+      <span>AUTONOMY</span><span class="star">✸</span>
+      <span>MACHINE LEARNING</span><span class="star">✸</span>
+      <span>LLM CONTROL</span><span class="star">✸</span>
+      <span>SIM · TO · REAL</span><span class="star">✸</span>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="contact-inner">
+    <span class="kicker"><span class="kdot"></span> SYSTEM_LOG / CONTACT</span>
+    <h2 class="contact-title" data-reveal>
+      <span>Get in <em>touch.</em></span>
+    </h2>
+
+    <div class="contact-layout">
+      <!-- LEFT · CHANNELS -->
+      <aside class="contact-side">
+        <p class="contact-sub" data-split-lines>
+          Open to full-time roles in Robotics, AI / ML Engineering and Autonomous
+          Systems Research — or building something end-to-end. Let's talk.
+        </p>
+
+        <a class="channel" href="mailto:abhapkar@asu.edu">
+          <span class="ch-label">_EMAIL_CHANNEL</span>
+          <span class="ch-value">abhapkar@asu.edu</span>
+        </a>
+        <a class="channel" href="tel:+16232726544">
+          <span class="ch-label">_PHONE_CHANNEL</span>
+          <span class="ch-value">+1 (623) 272-6544</span>
+        </a>
+        <div class="channel">
+          <span class="ch-label">_GEO_LOCATION</span>
+          <span class="ch-value">Tempe, AZ · USA</span>
+        </div>
+
+        <div class="channel-row">
+          <a class="channel-btn" href="https://www.linkedin.com/in/abhapkar/" target="_blank" rel="noopener">
+            CONNECT_ON_LINKEDIN
+          </a>
+          <a class="channel-btn ghost" href="https://github.com/aaryannb" target="_blank" rel="noopener">
+            VIEW_GITHUB
+          </a>
+        </div>
+
+        <a class="resume-card" href="assets/Aryan_Bhapkar_Resume.pdf" target="_blank" rel="noopener" download>
+          <div class="rc-left">
+            <span class="rc-label">_RESUME.PDF</span>
+            <span class="rc-name">Aryan_Bhapkar_Resume.pdf</span>
+            <span class="rc-meta">37 KB · 1 page · updated 2026</span>
+          </div>
+          <div class="rc-cta">
+            <span>DOWNLOAD</span>
+            <span class="rc-arrow">↓</span>
+          </div>
+        </a>
+      </aside>
+
+      <!-- RIGHT · FORM (native POST → FormSubmit.co) -->
+      <form class="contact-form" id="contactForm"
+            action="https://formsubmit.co/abhapkar@asu.edu"
+            method="POST">
+        <!-- FormSubmit config -->
+        <input type="hidden" name="_subject" value="New portfolio message">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_next" id="formNext" value="">
+        <!-- honeypot · blocks spam bots -->
+        <input type="text" name="_honey" class="honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+        <label class="field">
+          <span class="field-label">_FIRST_NAME</span>
+          <input type="text" name="name" required autocomplete="name">
+        </label>
+
+        <label class="field">
+          <span class="field-label">_EMAIL_ADDR</span>
+          <input type="email" name="email" required autocomplete="email">
+        </label>
+
+        <label class="field">
+          <span class="field-label">_SUBJECT_LINE</span>
+          <input type="text" name="subject" required>
+        </label>
+
+        <label class="field">
+          <span class="field-label">_MESSAGE_PROMPT</span>
+          <textarea name="message" rows="5" required></textarea>
+        </label>
+
+        <button class="submit-btn" type="submit">
+          <span class="sb-label">TRANSMIT_MESSAGE</span>
+          <span class="sb-arrow">→</span>
+        </button>
+
+        <div class="form-status" id="formStatus" aria-live="polite"></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="foot-col"><strong>ARYAN BHAPKAR</strong><span>Robotics · AI · ML</span></div>
+  <div class="foot-col center">
+    <span>© 2026 · Designed & built from scratch</span>
+  </div>
+  <div class="foot-col end">
+    <span>Tempe, AZ</span>
+    <span id="clock">--:--:--</span>
+  </div>
+</footer>
+
+</main>
+
+<!-- LIBRARIES -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+<script src="js/background.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
