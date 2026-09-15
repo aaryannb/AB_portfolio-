@@ -495,16 +495,27 @@ function navState() {
 }
 
 /* =============================================================
-   LIVE CLOCK (Arizona time)
+   LIVE CLOCK (San Francisco / Pacific time)
    ============================================================= */
 function clock() {
   const el = document.getElementById('clock');
   if (!el) return;
+  const pad = (n) => String(n).padStart(2, '0');
+  const tzFmt = new Intl.DateTimeFormat('en-US', {
+    timeZone: 'America/Los_Angeles',
+    hour: '2-digit', minute: '2-digit', second: '2-digit',
+    hour12: false,
+  });
+  const abbrFmt = new Intl.DateTimeFormat('en-US', {
+    timeZone: 'America/Los_Angeles',
+    timeZoneName: 'short',
+  });
   const tick = () => {
-    const d = new Date();
-    const az = new Date(d.toLocaleString('en-US', { timeZone: 'America/Phoenix' }));
-    const pad = (n) => String(n).padStart(2, '0');
-    el.textContent = `${pad(az.getHours())}:${pad(az.getMinutes())}:${pad(az.getSeconds())} MST`;
+    const now = new Date();
+    const time = tzFmt.format(now);
+    // "9/14/2026, PDT" → grab PDT/PST from the end
+    const abbr = abbrFmt.formatToParts(now).find(p => p.type === 'timeZoneName')?.value || 'PT';
+    el.textContent = `${time} ${abbr}`;
   };
   tick(); setInterval(tick, 1000);
 }
