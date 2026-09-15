@@ -1051,6 +1051,11 @@ button { font: inherit; cursor: none; background: none; border: 0; color: inheri
   transition: background .5s var(--ease);
 }
 .stack-col:hover { background: rgba(0,229,255,.04); }
+/* if the last row has only 1 column, let it span the full row */
+.stack-col:last-child:nth-child(3n+1) { grid-column: 1 / -1; }
+/* if the last row has 2 columns, split them evenly */
+.stack-col:last-child:nth-child(3n+2),
+.stack-col:nth-last-child(2):nth-child(3n+1) { grid-column: span 1; }
 .stack-head {
   font-family: var(--mono);
   font-size: 11px;
